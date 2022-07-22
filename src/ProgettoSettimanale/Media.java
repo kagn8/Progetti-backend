@@ -9,6 +9,7 @@ public abstract class Media {
 		this.titolo = titolo;
 		
 	}
+	//qUI CI SONO I METODI PLAY E SHOW, DA RIDEFINIRE ALL'INTERNO DELLE CLASSI
 	public void play(){};
 	public void show(){};
 }

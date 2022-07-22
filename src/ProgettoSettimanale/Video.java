@@ -44,10 +44,8 @@ public class Video extends Media implements Riproduci, Visualizza {
 		
 	}
 	//UNA STRINGA PER VISUALIZZARE I DETTAGLI DEL VIDEO
-	@Override
-	public void show() {
-		System.out.println("dettagli video: Titolo: "+titolo+" durata:"+durata+"s");
-	}
+	
+	
 
 	//DEFINIAMO I METODI DICHIARATI NELL'INTERFACCIA, QUESTI METODI COME SI PUò VEDERE SONO ABBASTANZA DESCRITTIVI E SEMPLICI
 	@Override
@@ -61,12 +59,12 @@ public class Video extends Media implements Riproduci, Visualizza {
 	}
 	
 	@Override
-	public void AumentaL() {
+	public void AumentaL() {//LUMINOSITà
 		lumix++;
 	}
 
 	@Override
-	public void DiminuisciL() {
+	public void DiminuisciL() {//LUMINOSITà
 		lumix--;
 	}
 }
