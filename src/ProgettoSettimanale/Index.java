@@ -3,6 +3,7 @@ package ProgettoSettimanale;
 import java.util.Scanner;
 
 public class Index {
+	//INIZIALIZZIAMO L'OGETTO SCANNER CHE UTILIZZEREMO PIù AVANTI
 	static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -96,16 +97,20 @@ public class Index {
 			
 
 			if (elementoMedia == 0) {
+				//CREIAMO LA CONDIZIONE SECONDO LA QUALE PREMENDO 0 IN TERMINALE LA RIPRODUZIONE VIENE TERMINATA
 				System.out.println("riproduzione terminata");
 			}
 
 			else if (m[el] instanceof Immagine && el > -1) {
+				//CREIAMO LA CONDIZIONE SECONDO LA QUALE CONTROLLIAMO CHE TIPO DI INTERFACCIA ABBIA L'ELEMENTO SELEZIONATO IN QUESTO CASO DEFINIAMO CHE SE è UN IMMAGINE, APPLICHIAMO IL METODO SHOW()
 				m[el].show();
 			}
 
 			else if (m[el] instanceof Audio || m[el] instanceof Video) {
+				//CREIAMO LA CONDIZIONE SECONDO LA QUALE CONTROLLIAMO CHE TIPO DI INTERFACCIA ABBIA L'ELEMENTO SELEZIONATO IN QUESTO CASO DEFINIAMO CHE SE è UN VIDEO O UN AUDIO, APPLICHIAMO IL METODO PLAY()
 				m[el].play();
 			}
 		} while (elementoMedia != 0);
+		//TERMINIAMO IL CICLO
 	}
 }
