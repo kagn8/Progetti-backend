@@ -1,0 +1,10 @@
+Rivista [ codice ISBN: 4381, titolo: Gente, Anno di pubblicazione: 2007, N° di pagine: 51, Periodicità: SEMESTRALE ];
+Libro [ codice ISBN: 9101, titolo: Tre gambe e un uomo, Anno di pubblicazione: 2012, N° di pagine: 523, autore: Rocco, genere: Dramatic ];
+Rivista [ codice ISBN: 2721, titolo: Oggi, Anno di pubblicazione: 2002, N° di pagine: 43, Periodicità: SETTIMANALE ];
+Rivista [ codice ISBN: 9321, titolo: Topolino 2000, Anno di pubblicazione: 2010, N° di pagine: 22, Periodicità: MENSILE ];
+Libro [ codice ISBN: 1234, titolo: Il Signore degli anelli, Anno di pubblicazione: 2001, N° di pagine: 963, autore: Tolkien, genere: Fantasy ];
+Libro [ codice ISBN: 4156, titolo: Dragon quest XI S - Echi di un'era perduta , Anno di pubblicazione: 2022, N° di pagine: 126, autore: Akira Toriyama, genere: Fantasy ];
+Rivista [ codice ISBN: 1321, titolo: Chi, Anno di pubblicazione: 1999, N° di pagine: 23, Periodicità: MENSILE ];
+Rivista [ codice ISBN: 4322, titolo: The Amazing Spiderman, Anno di pubblicazione: 2012, N° di pagine: 63, Periodicità: SETTIMANALE ];
+Libro [ codice ISBN: 1121, titolo: Crash Bandicoot 2: Cortex Strike back, Anno di pubblicazione: 1998, N° di pagine: 876, autore: Naughty dog, genere: Adventure ];
+Libro [ codice ISBN: 5678, titolo: Alla ricerca della valle incantata, Anno di pubblicazione: 2000, N° di pagine: 763, autore: Giorgio Mastrota, genere: Adventure ];
