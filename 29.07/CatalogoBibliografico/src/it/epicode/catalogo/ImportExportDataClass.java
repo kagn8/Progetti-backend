@@ -41,11 +41,11 @@ public class ImportExportDataClass implements ImportExportData {
 			}
 //		CREIAMO IL FILE DI TESTO CATALOG.TXT NELLA CARTELLA DEL NOSTRO PROGETTO
 			File catalogFile = new File("./catalog.csv");
-
+			Log.info("Scrittura eseguita correttamente");
 //		RACCOGLIAMO IL CONTENUTO DELLA STRINGA CREATA PRECEDENTEMENTE E LA SCRIVIAMO NEL FILE APPENA GENERATO, SECONDO IL SET DI CARATTERI "ISO_8859_1"
 			FileUtils.writeStringToFile(catalogFile, catalogToText, StandardCharsets.ISO_8859_1);
 		} catch (IOException e) {
-			Log.error("Il caricamento dell'archivio non è andato a buon fine!" + e);
+			Log.error("Errore durante il caricamento" + e);
 		}
 	}
 
