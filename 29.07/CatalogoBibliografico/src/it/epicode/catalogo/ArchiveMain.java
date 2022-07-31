@@ -49,8 +49,8 @@ public class ArchiveMain {
 		writeAndReadToExternalFile.writeToExternalFile();
 		Log.info("----------");
 		Log.info("Riscrittura nei log dei dati letti da file");
-//		LEGGIAMO IL FILE CATALOG.TXT CHE ABBIAMO SCRITTO PRECEDENTEMENTE E NE STAMPIAMO IL CONTENUTO IN CONSOLE
-		List<String> listaDatiLetti = writeAndReadToExternalFile.readToExternalFile();
-		listaDatiLetti.forEach(x -> Log.info(x));
+//		LEGGIAMO IL FILE CATALOG.CSV CHE ABBIAMO SCRITTO PRECEDENTEMENTE E NE STAMPIAMO IL CONTENUTO IN CONSOLE
+		Map<String, Catalog> listaDatiLetti = writeAndReadToExternalFile.readToExternalFile();
+		listaDatiLetti.forEach((k, v) -> System.out.println(v));
 	}
 }

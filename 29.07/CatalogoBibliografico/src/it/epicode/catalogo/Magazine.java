@@ -23,8 +23,7 @@ public class Magazine extends Catalog {
 //	DEFINIAMO UN METODO TOSTRING OVVERO UN METODO CHE CI PERMETTA DI STAMPARE AGILMENTE UN OGGETTO APPARTENENTE A QUESTA CLASSE
 	@Override
 	public String toString() {
-		return "Rivista [ codice ISBN: " + isbnCode + ", titolo: " + title + ", Anno di pubblicazione: "
-				+ PublicationYear + ", N° di pagine: " + numOfPage + ", Periodicità: " + periodicity + " ]";
+		return isbnCode + ";" + title + ";" + publicationYear + ";" + numOfPage + ";" + periodicity;
 	}
 
 }

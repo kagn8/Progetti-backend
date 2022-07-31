@@ -2,13 +2,20 @@ package it.epicode.catalogo;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+
 import org.apache.commons.io.FileUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 // GENERIAMO UNA CLASSE CHE IMPLEMENTA L'INTERFACCIA ImportExportData
 public class ImportExportDataClass implements ImportExportData {
+
+	private static final Logger Log = LoggerFactory.getLogger(ArchiveMain.class);
 
 //	INIZIALIZZIAMO UNA LISTA
 	public Map<String, Catalog> mainCatalog;
@@ -22,45 +29,56 @@ public class ImportExportDataClass implements ImportExportData {
 //	ANDIAMO A DEFINIRE IL METODO WRITE DICHIARATO NELL'INTERFACCIA
 	@Override
 	public void writeToExternalFile() throws IOException {
+		try {
 //		INIZIALIZZIAMO UNA STRINGA VUOTA
-		String catalogToText = "";
+			String catalogToText = "";
 
 //		GENERIAMO UN FOR CHE ANDRA AD AGIRE SUL MAIN CATALOG E PER OGNI VALORE AL SUO INTERNO
-		for (Catalog cat : mainCatalog.values()) {
-//			GENERA UNA STRINGA E LA AGGIUNGE ALLA VARIABILE STRINGA VUOTA GENERATA IN QUESTO METODO SEGUITA DA ";" E "\N" CHE MANDA A CAPO TRA UNA RIGA E L'ALTRA
-			catalogToText += (cat.toString() + ";" + "\n");
-			
-		}
+			for (Catalog cat : mainCatalog.values()) {
+//			GENERA UNA STRINGA E LA AGGIUNGE ALLA VARIABILE STRINGA VUOTA GENERATA IN QUESTO METODO SEGUITA DA "\N" CHE MANDA A CAPO TRA UNA RIGA E L'ALTRA
+				catalogToText += (cat.toString() + "\n");
+
+			}
 //		CREIAMO IL FILE DI TESTO CATALOG.TXT NELLA CARTELLA DEL NOSTRO PROGETTO
-		File catalogFile = new File("./catalog.txt");
+			File catalogFile = new File("./catalog.csv");
 
-//		RACCOGLIAMO IL CONTENUTO DELLA STRINGA CREATA PRECEDENTEMENTE E LA SCRIVIAMO NEL FILE APPENA GENERATO, SECONDO IL SET DI CARATTERI "UFT-8"
-		FileUtils.writeStringToFile(catalogFile, catalogToText, "UTF-8");
-
+//		RACCOGLIAMO IL CONTENUTO DELLA STRINGA CREATA PRECEDENTEMENTE E LA SCRIVIAMO NEL FILE APPENA GENERATO, SECONDO IL SET DI CARATTERI "ISO_8859_1"
+			FileUtils.writeStringToFile(catalogFile, catalogToText, StandardCharsets.ISO_8859_1);
+		} catch (IOException e) {
+			Log.error("Il caricamento dell'archivio non è andato a buon fine!" + e);
+		}
 	}
 
 //	ANDIAMO A DEFINIRE IL METODO READ DICHIARATO NELL'INTERFACCIA
 	@Override
-	public List<String> readToExternalFile() throws IOException {
-//		GENERIAMO UNA NUOVA LISTA
-		List<String> importedList = new ArrayList();
-
+	public Map<String, Catalog> readToExternalFile() throws IOException {
+//		INSERIAMO TUTTO INUN TRY COSì DA POTER PREVENIRE ERRORI
+		try {
 //		ANDIAMO A RICHIAMARE UN FILE
-		File file = new File("./catalog.txt");
+			File file = new File("./catalog.csv");
+//		ANDIAMO A LEGGERE IL CONTENUTO DEL FILE DEFINITO PRECEDENTEMENTE SEMPRE IN FORMATO "ISO_8859_1"
+			List<String> lines = FileUtils.readLines(file, StandardCharsets.ISO_8859_1);
 
-//		ANDIAMO A LEGGERE IL CONTENUTO DEL FILE DEFINITO PRECEDENTEMENTE SEMPRE IN FORMATO "UFT-8"
-		String readString = FileUtils.readFileToString(file, "UTF-8");
-		
-//		LEGGE TUTTO IL CONTENUTO DEL FILE, E LO DIVIDIAMO OCUNQUE CI SIA "\N", SUCCESSIVAMENTE AGGIUNGIAMO IL TUTTO A CATALOG
-		String[] catalog = readString.split("\n");
+			mainCatalog = lines.stream().map(line -> line.split(";")).map(el -> {
+//				PER OGNI STRINGA SCRITTA PRECEDENTEMENTE DEFINIAMO TRAMITE LA LUNGHEZZA DELL'OGGETTO SE CREARE UN LIBRO O UNA RIVISTA E LO AGGIUNGIAMO ALLA NOSTRA LISTA
+				if (el.length == 6) {
+					return new Book(el[0], el[1], el[2], Integer.parseInt(el[3]), el[4], el[5]);
+				} else {
+					return new Magazine(el[0], el[1], el[2], Integer.parseInt(el[3]), Periodicity.valueOf(el[4]));
+				}
+//		CON GLI ELEMENTI IN USCITA DI TIPO CATALOG CREIAMO UNA NUOVA MAP LIST
+			}).collect(Collectors.toMap(c -> c.getISBNcode(), c -> c));
 
-//		GENERIAMO UN FOR PER OGNI STRINGA DI CATALOG
-		for (String element : catalog) {
-//			AGGIUNGA QUELLA SINGOLA STRINGA ALLA LISTA DI STRINGHE GENERATA A INIZIO METODO
-			importedList.add(element);
+			Log.info("Lettura eseguita correttamente");
+//			RITORNIAMO LA NUOVA LISTA
+			return mainCatalog;
+//		GENERIAMO UN CATCH PER INTERCETTARE EROORI
+		} catch (IOException e) {
+			Log.error("errore durante la lettura dei file" + e);
 		}
 //		DIAMO IN USCITA LA LISTA APPENA POPOLATA COME DETTATO NELL'INTERFACCIA
-		return importedList;
+		return mainCatalog;
+
 	}
 
 }

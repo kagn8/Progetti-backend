@@ -33,8 +33,6 @@ public class Book extends Catalog {
 //	DEFINIAMO UN METODO TOSTRING OVVERO UN METODO CHE CI PERMETTA DI STAMPARE AGILMENTE UN OGGETTO APPARTENENTE A QUESTA CLASSE
 	@Override
 	public String toString() {
-		return "Libro [ codice ISBN: " + isbnCode + ", titolo: " + title + ", Anno di pubblicazione: " + PublicationYear
-				+ ", N° di pagine: " + numOfPage + ", autore: " + author + ", genere: " + genre + " ]";
+		return isbnCode + ";" + title + ";" + publicationYear + ";" + numOfPage + ";" + author + ";" + genre;
 	}
-
 }

@@ -16383,3 +16383,51 @@ Libro [ codice ISBN: 5678, titolo: Alla ricerca della valle incantata, Anno di p
 10:09:07 [INFO] it.epicode.catalogo.ArchiveMain > Rivista [ codice ISBN: 4322, titolo: The Amazing Spiderman, Anno di pubblicazione: 2012, N° di pagine: 63, Periodicità: SETTIMANALE ];
 10:09:07 [INFO] it.epicode.catalogo.ArchiveMain > Libro [ codice ISBN: 1121, titolo: Crash Bandicoot 2: Cortex Strike back, Anno di pubblicazione: 1998, N° di pagine: 876, autore: Naughty dog, genere: Adventure ];
 10:09:07 [INFO] it.epicode.catalogo.ArchiveMain > Libro [ codice ISBN: 5678, titolo: Alla ricerca della valle incantata, Anno di pubblicazione: 2000, N° di pagine: 763, autore: Giorgio Mastrota, genere: Adventure ];
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > CATALOGO INIZIALE COMPLETO:
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > 4381 4381;Gente;2007;51;SEMESTRALE
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > 9101 9101;Tre gambe e un uomo;2012;523;Rocco;Dramatic
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > 2721 2721;Oggi;2002;43;SETTIMANALE
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > 9321 9321;Topolino 2000;2010;22;MENSILE
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > 1234 1234;Il Signore degli anelli;2001;963;Tolkien;Fantasy
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > 4156 4156;Dragon quest XI S - Echi di un'era perduta ;2022;126;Akira Toriyama;Fantasy
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > 1321 1321;Chi;1999;23;MENSILE
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > 4322 4322;The Amazing Spiderman;2012;63;SETTIMANALE
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > 1121 1121;Crash Bandicoot 2: Cortex Strike back;1998;876;Naughty dog;Adventure
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > 5678 5678;Alla ricerca della valle incantata;2000;763;Giorgio Mastrota;Adventure
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > ----------
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > RICERCA PER ANNO (2012):
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > 9101 9101;Tre gambe e un uomo;2012;523;Rocco;Dramatic
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > 4322 4322;The Amazing Spiderman;2012;63;SETTIMANALE
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > ----------
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > RICERCA PER AUTORE (Tolkien):
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > 1234 1234;Il Signore degli anelli;2001;963;Tolkien;Fantasy
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > ----------
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > RICERCA PER ISBN (9101):
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > 9101 9101;Tre gambe e un uomo;2012;523;Rocco;Dramatic
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > ----------
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > Riscrittura nei log dei dati letti da file
+11:21:15 [INFO] it.epicode.catalogo.ArchiveMain > La lettura dell'archivio è andata a buon fine.
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > CATALOGO INIZIALE COMPLETO:
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > 4381 4381;Gente;2007;51;SEMESTRALE
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > 9101 9101;Tre gambe e un uomo;2012;523;Rocco;Dramatic
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > 2721 2721;Oggi;2002;43;SETTIMANALE
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > 9321 9321;Topolino 2000;2010;22;MENSILE
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > 1234 1234;Il Signore degli anelli;2001;963;Tolkien;Fantasy
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > 4156 4156;Dragon quest XI S - Echi di un'era perduta ;2022;126;Akira Toriyama;Fantasy
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > 1321 1321;Chi;1999;23;MENSILE
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > 4322 4322;The Amazing Spiderman;2012;63;SETTIMANALE
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > 1121 1121;Crash Bandicoot 2: Cortex Strike back;1998;876;Naughty dog;Adventure
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > 5678 5678;Alla ricerca della valle incantata;2000;763;Giorgio Mastrota;Adventure
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > ----------
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > RICERCA PER ANNO (2012):
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > 9101 9101;Tre gambe e un uomo;2012;523;Rocco;Dramatic
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > 4322 4322;The Amazing Spiderman;2012;63;SETTIMANALE
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > ----------
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > RICERCA PER AUTORE (Tolkien):
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > 1234 1234;Il Signore degli anelli;2001;963;Tolkien;Fantasy
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > ----------
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > RICERCA PER ISBN (9101):
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > 9101 9101;Tre gambe e un uomo;2012;523;Rocco;Dramatic
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > ----------
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > Riscrittura nei log dei dati letti da file
+11:39:19 [INFO] it.epicode.catalogo.ArchiveMain > Lettura eseguita correttamente

@@ -6,14 +6,14 @@ public abstract class Catalog {
 //	DEFINIAMO I PARAMETRI
 	protected String isbnCode;
 	protected String title;
-	protected String PublicationYear;
+	protected String publicationYear;
 	protected int numOfPage;
 
 //	DEFINIAMO UN COSTRUTTORE
 	public Catalog(String iSBNcode, String title, String publicationYear, int numOfPage) {
 		this.isbnCode = iSBNcode;
 		this.title = title;
-		this.PublicationYear = publicationYear;
+		this.publicationYear = publicationYear;
 		this.numOfPage = numOfPage;
 	}
 
@@ -35,11 +35,11 @@ public abstract class Catalog {
 	}
 
 	public String getPublicationYear() {
-		return PublicationYear;
+		return publicationYear;
 	}
 
 	public void setPublicationYear(String publicationYear) {
-		PublicationYear = publicationYear;
+		publicationYear = publicationYear;
 	}
 
 	public int getNumOfPage() {
