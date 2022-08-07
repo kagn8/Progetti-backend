@@ -34,11 +34,14 @@ public class CatalogDAO {
 		}
 	}
 
-	public void removeToCatalogByIsbn(String Isbn) {
+	public void removeToCatalogByIsbn(String isbn) {
 		try {
+			var query = serv.em.createNamedQuery(Catalog.QUERY_SELECT_SEARCH_ISBN, Catalog.class);
+			query.setParameter("isbn", isbn);
+			Catalog el = query.getSingleResult();
+			Catalog i = serv.em.find(Catalog.class, el.getId());
 			EntityTransaction transaction = serv.em.getTransaction();
 			transaction.begin();
-			Catalog i = serv.em.find(Catalog.class, Isbn);
 			serv.em.remove(i);
 			transaction.commit();
 

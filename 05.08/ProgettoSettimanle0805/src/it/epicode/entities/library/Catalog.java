@@ -38,7 +38,6 @@ public abstract class Catalog {
 	protected int numPage;
 
 	public Catalog(String codiceISBN, String titolo, String annoPublicazione, int nPagine) {
-		super();
 		this.isbnCode = codiceISBN;
 		this.title = titolo;
 		this.publicationYear = annoPublicazione;
@@ -62,6 +61,10 @@ public abstract class Catalog {
 
 	public int getnPagine() {
 		return numPage;
+	}
+	
+	public int getId() {
+		return id;
 	}
 
 	public void setCodiceISBN(String codiceISBN) {
