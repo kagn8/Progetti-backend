@@ -1,0 +1,29 @@
+travelDocument[issueDate, dealer[atm, rivenditore]] abs
+
+biglietti [super(titoloviaggio),validato]
+abbonamento[super(titoloviaggio),Tessera[utente], tipologia[enum],datadiscadenza]
+
+Dealer[identificativo, biglietti rilasciati[titoloviaggio]]
+
+atm [super(rivenditore),attivo(bool)]
+autorizzato[super(rivenditore) ,extra]
+
+utente[TESSERA[abbonamenti], nome,]
+
+tessera[numero tessera, data rilascio, data scadenza(annuale), utente, emesso da[rivenditore, biglietti[abbonamento]]
+
+mezzi [numero posti(if tipologia), stato [servizio(default), manutenzione], trattefattelist<tratta>]
+
+bus[super(mezzo) nposti]
+tram[super(mezzo) nposti]
+
+tratta[partenza, capolinea, tempomedio]
+
+stazione[roma, milano, bari]
+
+
+ServiceViaggio[mezzo, tratta, list<titoloviaggio>,
+-validatore(titolodiviaggio), 
+-validatoremezzo(se lo stato del mezzo non è idoneo il viaggio non si fa)
+-controllo(postimezzo, biglietto validi)
+]
